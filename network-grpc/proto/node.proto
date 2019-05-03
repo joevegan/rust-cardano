@@ -59,13 +59,13 @@ message Gossip {
 service Node {
   rpc Tip(TipRequest) returns (TipResponse);
   rpc GetBlocks(BlockIds) returns (stream Block) {
-    option idempotency_level = NO_SIDE_EFFECTS;
+    //option idempotency_level = NO_SIDE_EFFECTS;
   }
   rpc GetHeaders(BlockIds) returns (stream Header) {
-    option idempotency_level = NO_SIDE_EFFECTS;
+    //option idempotency_level = NO_SIDE_EFFECTS;
   }
   rpc GetMessages(MessageIds) returns (stream Message) {
-    option idempotency_level = NO_SIDE_EFFECTS;
+    //option idempotency_level = NO_SIDE_EFFECTS;
   }
 
   rpc PullBlocksToTip(PullBlocksToTipRequest) returns (stream Block);
